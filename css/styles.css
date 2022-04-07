@@ -1,3 +1,127 @@
+/* ================================= 
+  Main
+==================================== */
 * {
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: #F5F8F8;
+}
+
+body, a {
+    color: #495057;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+hr {
+    border: 1px solid #E9ECEF;
+}
+
+/* ================================= 
+Navigation
+==================================== */
+.nav {
+    display: flex;
+	padding: 5px;
+	margin: 0 auto;
+	flex-direction: column;
+}
+.navItem {
+	padding: 15px;
+	margin: 5px;	
+	background: #FCFFFF;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.name {
+    font-weight: 700;
+    background: none;
+    font-size: 1.5em;
+    text-transform: none;
+}
+
+/* ================================= 
+About
+==================================== */
+.about {
+    padding: 40px 0px;
+}
+
+.profilePic {
+    max-width: 200px;
+}
+
+.aboutMe {
+    text-align: center;
+    color: #6C757D;
+}
+
+/* ================================= 
+Portfolio
+==================================== */
+.portfolio {
+    display: flex;
+	padding: 5px;
+	margin: 0 auto;
+	flex-direction: column;
+    background: #FCFFFF;
+}
+.portfolioItem {
+	padding: 15px;
+	margin: 5px;	
+    text-align: center;
+}
+
+.sectionTitle {
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+/* ================================= 
+Contact
+==================================== */
+.contact {
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.contact p, a {
+    color: #6C757D;
+}
+
+/* ================================= 
+Footer
+==================================== */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item {
+    font-weight: 600;
+}
+
+.item a {
+    text-transform: uppercase;
 }
