@@ -9,6 +9,15 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     background-color: #F5F8F8;
+    text-align: center;
+    margin: 0 5%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 body, a {
@@ -21,14 +30,11 @@ a {
 
 ul {
     list-style: none;
-    padding-left: 0;
 }
 
 img {
-    width: 100%;
-    max-width: 300px;
+    max-width: 100%;
     display: block;
-    margin: 0 auto;
 }
 
 hr {
@@ -38,42 +44,43 @@ hr {
 /* ================================= 
 Navigation
 ==================================== */
-.nav {
-    display: flex;
-	padding: 5px;
-	margin: 0 auto;
-	flex-direction: column;
-}
-.navItem {
-	padding: 15px;
-	margin: 5px;	
-	background: #FCFFFF;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
+.name {
+	font-size: 1.35em;
+    padding-top: 10px;
 }
 
-.name {
-    font-weight: 700;
-    background: none;
-    font-size: 1.5em;
-    text-transform: none;
+.nav {
+    padding: 10px 0;
+}
+
+.name a, .nav a {
+	display: block;
+    color: #495057;
+}
+.nav a {
+	font-size: .9em;
+	text-transform: uppercase;
+    background: #FCFFFF;
+    font-weight: 600;
+    padding: 5px 0;
+    margin: 5px 0;
 }
 
 /* ================================= 
 About
 ==================================== */
 .about {
-    padding: 40px 0px;
+    padding: 30px 0;
 }
 
 .profilePic {
     max-width: 200px;
+    margin: 0 auto;
 }
 
-.aboutMe {
-    text-align: center;
+.secondary {
     color: #6C757D;
+    padding-top: 20px;
 }
 
 /* ================================= 
@@ -81,15 +88,17 @@ Portfolio
 ==================================== */
 .portfolio {
     display: flex;
-	padding: 5px;
-	margin: 0 auto;
 	flex-direction: column;
     background: #FCFFFF;
+    padding: 20px 0;
 }
+
 .portfolioItem {
-	padding: 15px;
-	margin: 5px;	
-    text-align: center;
+    padding: 10px 0;
+}
+
+.portfolioItem p {
+    margin: 0 auto;
 }
 
 .sectionTitle {
@@ -101,8 +110,9 @@ Portfolio
 Contact
 ==================================== */
 .contact {
-    text-align: center;
-    padding: 40px 0px;
+    padding: 60px 0;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .contact p, a {
@@ -112,16 +122,138 @@ Contact
 /* ================================= 
 Footer
 ==================================== */
-.container {
-    display: flex;
+.footer {
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 }
 
-.item {
+.footer,
+.footerItem {
+    display: flex;
+}
+
+.footerName {
+	font-size: 1em;
+}
+
+.footerName a, .footerItem a {
+	display: block;
+    color: #495057;
+}
+.footerItem a {
+	font-size: 1em;
+	text-transform: uppercase;
     font-weight: 600;
 }
 
-.item a {
-    text-transform: uppercase;
+
+/* ================================= 
+Media Queries
+==================================== */
+@media screen and (max-width: 767px) {
+    .footerLarge {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* Flex */
+    .header,
+    .nav, 
+    .about, 
+    .portfolio {
+        display: flex;
+    }
+
+    /* Navigation */
+    .header {    
+        flex-direction: column;
+		align-items: center;
+    }
+
+    .nav a {
+        background: none;
+        padding: 0px 15px;
+    }
+
+    /* About */
+    .about {
+        flex-wrap: wrap;
+    }
+
+    .aboutCol {
+		flex: 1 50%;
+	}
+
+	.secondary {
+		order: -1;
+        text-align: left;
+        padding-top: 0;
+	}
+
+    .secondary p {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .profilePic {
+        max-width: 300px;
+        margin-right: 0;
+    }
+
+
+    /* Portolfio */
+    .portfolio {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .portfolio img {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .portfolioItem {
+		flex: 1 1 40%;
+        display: inline-block;
+	}
+
+    .portfolioItem:first-child {
+        flex: 1 1 100%;
+    }
+
+    .portfolioItem p {
+        width: 300px;
+    }
+
+    /* Footer */
+    .footerSmall {
+        display: none;
+    }
+
+    .footerLarge {
+        padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /* Navigation */
+    .header {
+        flex-direction: row;
+		justify-content: space-between;
+    }  
+
+    .portfolioItem {
+		flex-basis: 0;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+    body {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
 }
