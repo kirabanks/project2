@@ -8,20 +8,15 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    background-color: #F5F8F8;
     text-align: center;
-    margin: 0 5%;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    margin: 0;
 }
 
 main {
     flex: 1;
-}
-
-body, a {
-    color: #495057;
 }
 
 a {
@@ -44,9 +39,18 @@ hr {
 /* ================================= 
 Navigation
 ==================================== */
+header {
+    background-color: #62717e;
+}
+
+header a:hover {
+    color: #e0ab26;
+}
+
 .name {
-	font-size: 1.35em;
-    padding-top: 10px;
+	font-size: 3em;
+    font-family: 'Chewy', cursive;
+    margin: 20px 0 5px 0;
 }
 
 .nav {
@@ -55,12 +59,11 @@ Navigation
 
 .name a, .nav a {
 	display: block;
-    color: #495057;
+    color: #dfdee0;
 }
 .nav a {
 	font-size: .9em;
 	text-transform: uppercase;
-    background: #FCFFFF;
     font-weight: 600;
     padding: 5px 0;
     margin: 5px 0;
@@ -70,7 +73,8 @@ Navigation
 About
 ==================================== */
 .about {
-    padding: 30px 0;
+    padding: 30px 10px;
+    background-color: #675a85;
 }
 
 .profilePic {
@@ -79,8 +83,8 @@ About
 }
 
 .secondary {
-    color: #6C757D;
     padding-top: 20px;
+    color: #dfdee0;
 }
 
 /* ================================= 
@@ -89,8 +93,9 @@ Portfolio
 .portfolio {
     display: flex;
 	flex-direction: column;
-    background: #FCFFFF;
-    padding: 20px 0;
+    padding: 20px 10px;
+    background-color: #dfdee0;
+    color: #62717e;
 }
 
 .portfolioItem {
@@ -111,12 +116,23 @@ Contact
 ==================================== */
 .contact {
     padding: 60px 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #52bab4;
+    color: #dfdee0;
+}
+
+.contact a {
+    color: #675a85;
+}
+
+.contact p {
     max-width: 500px;
     margin: 0 auto;
 }
 
-.contact p, a {
-    color: #6C757D;
+.contact a:hover {
+    color: #e0ab26;
 }
 
 /* ================================= 
@@ -127,7 +143,16 @@ Footer
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px;
+    background-color: #62717e;
+}
+
+.footer a {
+    color: #dfdee0;
+}
+
+.footer a:hover {
+    color: #e0ab26;
 }
 
 .footer,
@@ -141,7 +166,6 @@ Footer
 
 .footerName a, .footerItem a {
 	display: block;
-    color: #495057;
 }
 .footerItem a {
 	font-size: 1em;
@@ -182,6 +206,7 @@ Media Queries
     /* About */
     .about {
         flex-wrap: wrap;
+        padding: 30px 30px;
     }
 
     .aboutCol {
@@ -209,6 +234,7 @@ Media Queries
     .portfolio {
         flex-wrap: wrap;
         flex-direction: row;
+        padding: 20px 30px;
     }
 
     .portfolio img {
@@ -244,16 +270,36 @@ Media Queries
     .header {
         flex-direction: row;
 		justify-content: space-between;
-    }  
+        padding: 0 5%;
+
+    }
+
+    .name {
+        padding-left: 10px;
+    }
+
+    /* About */
+    .about {
+        padding: 30px 5%;
+    }
+
+    /* Portfolio */
+    .portfolio {
+        padding: 20px 5%;
+    }
 
     .portfolioItem {
 		flex-basis: 0;
 	}
+
+    /* Footer */
+    .footer {
+        padding: 20px 5%;
+    }
 }
 
 @media screen and (min-width: 1025px) {
     body {
-        max-width: 1024px;
         margin: 0 auto;
     }
 }
