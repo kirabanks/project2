@@ -112,6 +112,37 @@ Portfolio
 }
 
 /* ================================= 
+Skills
+==================================== */
+.skills {
+    display: flex;
+	flex-direction: column;
+    padding: 20px 10px;
+    background-color: #e0ab26;
+    color: #dfdee0;
+
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 20px 30px;
+}
+
+.skillItem {
+    padding: 10px 0;
+
+    flex: 1 1 40%;
+    display: inline-block;
+}
+
+.skillItem img {
+    width:50%;
+    margin: 0 auto;
+    max-width: 100px;
+}
+
+.skillItem:first-child {
+    flex: 1 1 100%;
+}
+/* ================================= 
 Contact
 ==================================== */
 .contact {
@@ -254,6 +285,18 @@ Media Queries
     .portfolioItem p {
         width: 300px;
     }
+
+    /* Skills */
+    .skills {
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding: 20px 5%;
+    }
+
+    .skillItem {
+		flex: 1 1 20%;
+        display: inline-block;
+	}
 
     /* Footer */
     .footerSmall {
